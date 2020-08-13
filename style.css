@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: skyblue;
+    grid-template-rows: .5fr 4.5fr 1fr;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    display: grid;
+    justify-items: center;
+    grid-gap: 4px;
+    object-fit: contain;
+    grid-template-areas:
+    "header header header"
+    "imageselector image desc"
+    "footer footer footer"
+}
+
+body *{
+    background-color: white;
+}
+
+header {
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-area: header;
+    width: 100%;
+}
+
+h1 {
+}
+
+header img{
+    /* max-height: 60px; */
+}
+
+
+#description {
+    grid-area: desc;
+    width: 100%;
+    text-align: center;
+}
+
+.btnBold {
+    font-weight: bold;
+}
+
+#imageselector {
+    grid-area: imageselector;
+    width: 100%;
+}
+
+#imageselector p{
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    width: 100%;
+}
+
+#imgSection{
+    grid-area: image;
+    width: 100%;
+}
+
+button {
+  width: 60%;
+  height: 10vh;
+}
+
+
+img {
+    object-fit: contain;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 5%;
+    max-height: 70vh;
+    min-width: 110vh;
+}
+
+#selecttext {
+    grid-area: selecttext;
+}
+
+#list {
+    grid-area: list;
+}
+
+@media only screen and (max-width: 700px){
+    body {
+        grid-template-rows: 1fr 1fr 2.75fr .5fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 2px;
+        grid-template-areas:
+        "header"
+        "imageselector"
+        "image"
+        "desc"
+        "footer"
+    }
+    #imageselector {
+      justify-content: center;
+      align-items: center;
+    }
+    #list{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: center;
+    }
+  img {
+    object-fit: contain;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-right: 0%;
+    max-height: 100vh;
+    min-width: 0;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  button{
+    width: 65px;
+    align-text: center;
+  }
+
+}
